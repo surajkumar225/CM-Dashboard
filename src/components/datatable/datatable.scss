@@ -2,6 +2,13 @@
     height: 600px;
     padding: 20px;
 
+    .Datagrid{
+        &.checkboxSelection{
+            border: 2px solid;
+        }
+
+    }
+
     .datatableTitle {
         width: 100%;
         font-size: 24px;

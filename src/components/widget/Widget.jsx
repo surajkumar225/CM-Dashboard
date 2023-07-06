@@ -8,16 +8,17 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 const Widget = ({ type }) => {
   let data;
 
-  //temporary
-  const amount = 100;
-  const diff = 20;
+  // const amount = 100;
+  // const diff = 20;
 
   switch (type) {
     case "user":
       data = {
-        title: "USERS",
+        title: "STUDENTS",
         isMoney: false,
-        link: "See all users",
+        number: "150000",
+        link: "View all",
+      
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -31,11 +32,12 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "TEACHERS",
         isMoney: false,
-        link: "View all orders",
+        number: "2250",
+        link: "View all",
         icon: (
-          <ShoppingCartOutlinedIcon
+          <PersonOutlinedIcon
             className="icon"
             style={{
               backgroundColor: "rgba(218, 165, 32, 0.2)",
@@ -47,11 +49,12 @@ const Widget = ({ type }) => {
       break;
     case "earning":
       data = {
-        title: "EARNINGS",
+        title: "PARENTS",
         isMoney: true,
-        link: "View net earnings",
+        number: "5850",
+        link: "View all",
         icon: (
-          <MonetizationOnOutlinedIcon
+          <PersonOutlinedIcon
             className="icon"
             style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
           />
@@ -60,11 +63,12 @@ const Widget = ({ type }) => {
       break;
     case "balance":
       data = {
-        title: "BALANCE",
-        isMoney: true,
+        title: "EARNING",
+        // isMoney: true,
+        number: "$179370",
         link: "See details",
         icon: (
-          <AccountBalanceWalletOutlinedIcon
+           <MonetizationOnOutlinedIcon
             className="icon"
             style={{
               backgroundColor: "rgba(128, 0, 128, 0.2)",
@@ -82,15 +86,17 @@ const Widget = ({ type }) => {
     <div className="widget">
       <div className="left">
         <span className="title">{data.title}</span>
-        <span className="counter">
-          {data.isMoney && "$"} {amount}
-        </span>
+         <span className="number">{data.number}</span>
+        {/* <span className="counter"> */}
+          {/* {data.isMoney && "$"}  */} 
+          {/* {amount} */}
+        {/* </span> */}
         <span className="link">{data.link}</span>
       </div>
       <div className="right">
         <div className="percentage positive">
           <KeyboardArrowUpIcon />
-          {diff} %
+          {/* {diff} % */}
         </div>
         {data.icon}
       </div>

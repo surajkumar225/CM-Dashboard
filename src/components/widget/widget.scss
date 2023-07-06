@@ -6,7 +6,8 @@
     -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     border-radius: 10px;
-    height: 100px;
+    height: 200px;
+    background-image: linear-gradient(to top, hsl(165, 100%, 99%), hsl(237, 63%, 64%));
 
     .left,
     .right {
@@ -14,10 +15,17 @@
         flex-direction: column;
         justify-content: space-between;
 
+        .number {
+                color: white;
+                font-size: 35px;
+                padding-left: 85px;
+            
+            }
         .title {
-            font-weight: bold;
-            font-size: 14px;
-            color: rgb(160, 160, 160);
+            font-weight: bolder;
+            font-size: 15px;
+            color: rgb(34, 33, 33);
+            padding: 5px 10px;
         }
 
         .counter {
@@ -25,10 +33,16 @@
             font-weight: 300;
         }
 
+        // .number{
+        //     color: white;
+        //     font-size: 30px;
+        //     padding-left: 80px;         
+        // }
         .link {
             width: max-content;
             font-size: 12px;
-            border-bottom: 1px solid gray;
+            border-bottom: 1px solid rgb(186, 180, 180);
+            color: black;
         }
 
         .percentage {

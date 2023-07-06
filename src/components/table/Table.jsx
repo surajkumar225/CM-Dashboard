@@ -10,53 +10,53 @@ import Paper from "@mui/material/Paper";
 const List = () => {
   const rows = [
     {
-      id: 1143155,
-      product: "Acer Nitro 5",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 785,
-      method: "Cash on Delivery",
-      status: "Approved",
+      roll: 10802028,
+      name: "Shashank",
+      img: "https://1000logos.net/wp-content/uploads/2016/10/Batman-Logo-1939.png",
+      department: "Information Technology",
+      batch: "B21",
+      certifications: 3,
+      projects: "DX-11",
+      status: "Submitted",
     },
     {
-      id: 2235235,
-      product: "Playstation 5",
-      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
-      date: "1 March",
-      amount: 900,
-      method: "Online Payment",
+      roll: 10802037,
+      name: "Bishnu",
+      img: "https://images.squarespace-cdn.com/content/v1/5af0b99875f9ee930253bb0f/1532979248798-WWG5QMEXSIZXNM7ATVCF/terry-crews.png?format=1000w",
+      department: "Information Technology",
+      batch: "B22",
+      certifications: 1,
+      projects: "DX-22",
       status: "Pending",
     },
     {
-      id: 2342353,
-      product: "Redragon S101",
-      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 35,
-      method: "Cash on Delivery",
+      roll: 10802054,
+      name: "Joy",
+      img: "https://media.istockphoto.com/id/1435686874/photo/pensive-clever-indian-or-arabian-guy-student-or-freelancer-using-laptop-working-or-studying.webp?b=1&s=170667a&w=0&k=20&c=VCKT7t6UliBzLlHRrjYRyp_40KzIzziYdUWyFe9c24A=",
+      department: "Information Technology",
+      batch: "B21",
+      certifications: 2,
+      projects: "DX-33",
       status: "Pending",
     },
     {
-      id: 2357741,
-      product: "Razer Blade 15",
-      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
-      date: "1 March",
-      amount: 920,
-      method: "Online",
-      status: "Approved",
+      roll: 10802075,
+      name: "Biplab",
+      img: "https://post.healthline.com/wp-content/uploads/2020/11/transmasucline-person-using-mobile-phone-1200x628-facebook-1200x628.jpg",
+      department: "Information Technology",
+      batch: "B21",
+      certifications: 3,
+      projects: "DX-44",
+      status: "Submitted",
     },
     {
-      id: 2342355,
-      product: "ASUS ROG Strix",
-      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
-      date: "1 March",
-      amount: 2000,
-      method: "Online",
+      roll: 10802089,
+      name: "Roumdip",
+      img: "https://www.betterup.com/hubfs/Creative-businessman-using-laptop-in-co-working-space-characteristics-of-a-determined-person.jpg",
+      department: "Information Technology",
+      batch: "B22",
+      certifications: 2,
+      projects: "DX-55",
       status: "Pending",
     },
   ];
@@ -65,29 +65,29 @@ const List = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
-            <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Amount</TableCell>
-            <TableCell className="tableCell">Payment Method</TableCell>
+            <TableCell className="tableCell">University Roll</TableCell>
+            <TableCell className="tableCell">Name</TableCell>
+            <TableCell className="tableCell">Department</TableCell>
+            <TableCell className="tableCell">Batch</TableCell>
+            <TableCell className="tableCell">Certifications</TableCell>
+            <TableCell className="tableCell">Projects</TableCell>
             <TableCell className="tableCell">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell className="tableCell">{row.id}</TableCell>
+            <TableRow key={row.roll}>
+              <TableCell className="tableCell">{row.roll}</TableCell>
               <TableCell className="tableCell">
                 <div className="cellWrapper">
                   <img src={row.img} alt="" className="image" />
-                  {row.product}
+                  {row.name}
                 </div>
               </TableCell>
-              <TableCell className="tableCell">{row.customer}</TableCell>
-              <TableCell className="tableCell">{row.date}</TableCell>
-              <TableCell className="tableCell">{row.amount}</TableCell>
-              <TableCell className="tableCell">{row.method}</TableCell>
+              <TableCell className="tableCell">{row.department}</TableCell>
+              <TableCell className="tableCell">{row.batch}</TableCell>
+              <TableCell className="tableCell">{row.certifications}</TableCell>
+              <TableCell className="tableCell">{row.projects}</TableCell>
               <TableCell className="tableCell">
                 <span className={`status ${row.status}`}>{row.status}</span>
               </TableCell>
